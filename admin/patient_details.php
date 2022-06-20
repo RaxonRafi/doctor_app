@@ -1,33 +1,36 @@
 <?php
-require_once "inc/header.php"
+$patient_details = true;
+require_once "inc/header.php";
+
 ?>
+<!-- Breadcrumb -->
+<!-- Page Title -->
 <div class="container mt-0">
     <div class="row breadcrumb-bar">
         <div class="col-md-6">
-            <h3 class="block-title">Patient details</h3>
+            <h3 class="block-title"> Patient Details</h3>
         </div>
         <div class="col-md-6">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="dashboard.php">
+                    <a href="index.html">
                         <span class="ti-home"></span>
                     </a>
                 </li>
-                <a href="patient_details.php">
-                    <li class="breadcrumb-item active"> / Patient details </li>
-                </a>
-
+                <li class="breadcrumb-item">Patients</li>
+                <li class="breadcrumb-item active">Patient Details</li>
             </ol>
         </div>
     </div>
 </div>
+<!-- /Page Title -->
 
+<!-- /Breadcrumb -->
 <!-- Main Content -->
 <div class="container">
-
     <div class="row">
         <!-- Widget Item -->
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div class="widget-area-2 proclinic-box-shadow">
                 <h3 class="widget-title">Patient Details</h3>
                 <div class="table-responsive">
@@ -87,85 +90,130 @@ require_once "inc/header.php"
         </div>
         <!-- /Widget Item -->
         <!-- Widget Item -->
-        <div class="col-md-6">
-            <div class="widget-area-2 proclinic-box-shadow">
-                <h3 class="widget-title">Visit Notes</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Examination</label>
-                        <input type="text" class="form-control" placeholder="Physical examination">
 
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Health Parameters</label>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="widget-area-2 proclinic-box-shadow">
+                    <h3 class="widget-title">Enter Patient Medical History</h3>
+                    <form>
+
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Pressure">
+                            <label for="exampleFormControlSelect1">Condition</label>
+
+                            <select style="width: 75%;" class="form-control" id="condition_dropdown" multiple>
+                                <option>--Select Condition--</option>
+                                <option>Type 2 Diabetes</option>
+                                <option>Type 1 Diabetes</option>
+                                <option>High Blood pressure</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Pulse ">
+                            <label for="exampleFormControlSelect1">Procedures</label>
+                            <select style="width: 75%;" class="form-control" id="procedure_dropdown" multiple>
+                                <option>--Select Procedures--</option>
+                                <option>Colonoscopy</option>
+                                <option>Gall bladder surgery</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood SPO2 ">
+                            <label>Family History</label>
+
+                            <div class="form-group  d-flex">
+
+                                <select col="3" class="form-control" id="exampleFormControlSelect1">
+                                    <option>--Father Condition--</option>
+                                    <option> Type 2 Diabetes</option>
+                                    <option> Type 1 Diabetes</option>
+                                    <option>High Blood pressure</option>
+                                    <option> Eye issue</option>
+                                    <option>Kidney disease</option>
+                                    <option>Cholesterol issue</option>
+                                </select>
+                                <select col="3" class="form-control" id="exampleFormControlSelect1">
+                                    <option>--Mother Condition--</option>
+                                    <option> Type 2 Diabetes</option>
+                                    <option> Type 1 Diabetes</option>
+                                    <option>High Blood pressure</option>
+                                    <option> Eye issue</option>
+                                    <option>Kidney disease</option>
+                                    <option>Cholesterol issue</option>
+                                </select>
+                                <select col="3" class="form-control" id="exampleFormControlSelect1">
+                                    <option>--Sister Condition--</option>
+                                    <option> Type 2 Diabetes</option>
+                                    <option> Type 1 Diabetes</option>
+                                    <option>High Blood pressure</option>
+                                    <option> Eye issue</option>
+                                    <option>Kidney disease</option>
+                                    <option>Cholesterol issue</option>
+                                </select>
+                                <select col="3" class="form-control" id="exampleFormControlSelect1">
+                                    <option>--Brother Condition--</option>
+                                    <option> Type 2 Diabetes</option>
+                                    <option> Type 1 Diabetes</option>
+                                    <option>High Blood pressure</option>
+                                    <option> Eye issue</option>
+                                    <option>Kidney disease</option>
+                                    <option>Cholesterol issue</option>
+                                </select>
+
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Fasting Blood Sugar">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Random Blood Sugar">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood HbA1c">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Creatinine">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood Urine MACR">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Blood BUN">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        </from>
-                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
 
             </div>
-        </div>
-        <!-- /Widget Item -->
-        <!-- Widget Item -->
-        <div class="col-md-12">
-            <div class="widget-area-2 proclinic-box-shadow">
-                <h3 class="widget-title">Patient Medical History</h3>
-                <form>
-
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Condition</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>--Select Condition--</option>
-                            <option>Type 2 Diabetes</option>
-                            <option>Type 1 Diabetes</option>
-                            <option>High Blood pressure</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Procedures</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>--Select Procedures--</option>
-                            <option>Colonoscopy</option>
-                            <option>Gall bladder surgery</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Family History</label>
-                        <textarea placeholder="Enter family history" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
         </div>
     </div>
     <!-- /Widget Item -->
+    <!-- Hoverable rows Table-->
+    <div class="col-md-12">
+        <div class="widget-area-2 proclinic-box-shadow">
+            <h3 class="widget-title"> Patient Medical History</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <td><strong>Patient Condition</strong></td>
+                            <td>Type 2 Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Procedures</strong> </td>
+                            <td>Gall bladder surgery</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Family History</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Father Condition</strong></td>
+                            <td>Type 2 Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mother Condition </strong>
+                            </td>
+                            <td>Type 2 Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>sister Condition</strong>
+                            </td>
+                            <td>Type 2 Diabetes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brother Condition</strong>
+                            </td>
+                            <td>Type 2 Diabetes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <!-- /Hoverable rows Table-->
 </div>
 </div>
 <!-- /Main Content -->

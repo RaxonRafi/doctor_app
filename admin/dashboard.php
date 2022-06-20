@@ -1,5 +1,7 @@
 <?php
+$dashboard = true;
 require_once "inc/header.php";
+
 ?>
 
 <div class="container mt-0">

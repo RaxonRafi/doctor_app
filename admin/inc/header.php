@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="charts/css/morris.css">
     <!-- jvectormap -->
     <link rel="stylesheet" href="css/jquery-jvectormap.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <script src="js/modernizr.min.js"></script>
 </head>
@@ -43,7 +44,7 @@
             <div class="container top-brand">
                 <nav class="navbar navbar-default">
                     <div class="navbar-header">
-                        <div class="sidebar-header"> <a href="index.html"><img src="images/oxyjon_logo_square.jpg" class="logo" alt="logo"></a>
+                        <div class="sidebar-header"> <a href="dashboard.php"><img src="images/logo.png" class="logo" alt="logo"></a>
                         </div>
                     </div>
                     <ul class="nav justify-content-end">
@@ -121,19 +122,14 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown active">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="ti-home"></span> Dashboard</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="../Vertical/index.html">Vertical</a>
-                                    <a class="dropdown-item" href="../Vertical-RTL/index.html">Vertical RTL</a>
-                                    <a class="dropdown-item" href="index.html">Horizantal</a>
-                                </div>
+                            <li class="nav-item dropdown <?= (isset($dashboard)) ? 'active' : '' ?> ">
+                                <a class="nav-link dropdown-toggle" href="dashboard.php" role="button" aria-haspopup="true" aria-expanded="false"><span class="ti-home"></span> Dashboard</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item dropdown  <?= (isset($patient_details)) ? 'active' : '' ?> ">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="ti-wheelchair"></span> Patients</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="add-patient.html">Add Patient</a>
-                                    <a class="dropdown-item" href="patients.html">All Patients</a>
+                                    <a class="dropdown-item" href="addpatient.php">Add Patient</a>
+                                    <a class="dropdown-item" href="visit_notes.php">Visit Notes</a>
                                     <a class="dropdown-item" href="patient_details.php">Patient Details</a>
                                     <a class="dropdown-item" href="edit-patient.html">Edit Patient</a>
                                 </div>
@@ -172,43 +168,7 @@
                                     <a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="ti-layout-tab"></span> UI Kit</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="typography.html">Typography</a>
-                                    <a class="dropdown-item" href="buttons.html">Buttons</a>
-                                    <a class="dropdown-item" href="cards.html">Cards</a>
-                                    <a class="dropdown-item" href="tabs.html">Tabs</a>
-                                    <a class="dropdown-item" href="accordions.html">Accordions</a>
-                                    <a class="dropdown-item" href="modals.html">Modals</a>
-                                    <a class="dropdown-item" href="lists.html">Lists &amp; Media Object</a>
-                                    <a class="dropdown-item" href="grid.html">Grid</a>
-                                    <a class="dropdown-item" href="progress-bars.html">Progress Bars</a>
-                                    <a class="dropdown-item" href="notifications-alerts.html">Notifications &amp; Alerts</a>
-                                    <a class="dropdown-item" href="pagination.html">Pagination</a>
-                                    <a class="dropdown-item" href="carousel.html">Carousel</a>
-                                    <a class="dropdown-item" href="tables.html"> Tables</a>
-                                    <a class="dropdown-item" href="charts-1.html">Morris</a>
-                                    <a class="dropdown-item" href="charts-2.html">Flot</a>
-                                    <a class="dropdown-item" href="map-1.html">Google Maps</a>
-                                    <a class="dropdown-item" href="map-2.html">Vector Maps</a>
-                                    <a class="dropdown-item" href="forms.html">Forms</a>
-                                    <a class="dropdown-item" href="font-awesome.html">Font Awesome </a>
-                                    <a class="dropdown-item" href="themify.html">Themify</a>
-                                </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="ti-file"></span> Other Pages</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="login.html">Login </a>
-                                    <a class="dropdown-item" href="sign-up.html">Sign Up</a>
-                                    <a class="dropdown-item" href="404.html">404</a>
-                                    <a class="dropdown-item" href="blank-page.html">Blank Page</a>
-                                    <a class="dropdown-item" href="pricing.html">Pricing</a>
-                                    <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    <a class="dropdown-item" href="invoice.html">Invoice</a>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                 </nav>

@@ -1,7 +1,7 @@
             <!--Copy Rights-->
             <div class="container">
                 <div class="d-sm-flex justify-content-center">
-                    <span class="text-muted text-center d-block d-sm-inline-block">Copyright © 2018 <a href="http://www.konnectplugins.com/" target="_blank">konnectcode</a>. All rights reserved.</span>
+                    <span class="text-muted text-center d-block d-sm-inline-block">Copyright © <?= date("Y") ?> Oxyjon. All rights reserved.</span>
                 </div>
             </div>
             <!-- /Copy Rights-->
@@ -26,6 +26,16 @@
 
             <!-- Custom Script-->
             <script src="js/custom.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('#condition_dropdown').select2();
+                    $('#procedure_dropdown').select2();
+                    $('#medicine_dropdown').select2();
+                    $('#investigation_dropdown').select2();
+                    $('#diagnosis_dropdown').select2();
+                });
+            </script>
             </body>
 
             </html>
